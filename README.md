@@ -9,12 +9,7 @@ This repository contains a web-based application designed to predict bone age fr
 - [Installation](#installation)
 - [Usage](#usage)
 - [Dataset](#dataset)
-- [Model Training and Architecture](#model-training-and-architecture)
-- [Evaluation](#evaluation)
-- [File Structure](#file-structure)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+
 
 ## Features
 
