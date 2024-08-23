@@ -1,6 +1,6 @@
 # Bone Age Predictor
 
-This repository contains a web-based application designed to predict bone age from hand radiographs using deep learning. The project leverages the [RSNA Bone Age Dataset](https://www.kaggle.com/datasets/kmader/rsna-bone-age), a widely recognized dataset in medical imaging, to train and validate a Convolutional Neural Network (CNN) model. The interface, built with `Gradio`, allows users to interactively upload hand radiographs and receive bone age predictions.
+This repository contains a web-based application designed to predict bone age from hand radiographs using deep learning. The project leverages the [RSNA Bone Age Dataset](https://www.kaggle.com/datasets/kmader/rsna-bone-age), a widely recognized dataset in medical imaging, to train and validate a Convolutional Neural Network (CNN) model. The interface, built with `Streamlit`, allows users to interactively upload hand radiographs and receive bone age predictions.
 
 ## Table of Contents
 
