@@ -9,6 +9,9 @@
 ![Screenshot 2024-08-23 163755](https://github.com/user-attachments/assets/7bb38e33-3f2c-4a8d-aa56-2b7f140cd4ff)
 
 
+ ## ***Fine-Tuning Deep Learning Models for Age Prediction***
+# . Implemented Deep Learning and Transfer Learning by fine-tuning using imagenet and advance CNNs Models .
+# . Performed various experiments to determine the best model using  :- *'loss: 0.2273 - mae: 0.2854 - val_loss: 0.1413 - val_mae: 0.2562 - learning_rate: 0.0010'*
 ## Demo
 
 Experience the live demo of the application [here](http://localhost:8501/).
@@ -16,7 +19,6 @@ Experience the live demo of the application [here](http://localhost:8501/).
 ## Features
 
 - **Interactive Web Interface:** Upload hand radiographs and get real-time bone age predictions.
-- **Deep Learning:** Utilizes a CNN trained on the RSNA Bone Age Dataset and using 'imagenet' for fine turning the model to perform best. 
 - **Easy Deployment:** Built using `Streamlit`, making it simple to run locally or deploy on cloud platforms.
 - **Comprehensive Dataset:** Trained on a dataset with 12,000+ images, ensuring robust predictions.
 
