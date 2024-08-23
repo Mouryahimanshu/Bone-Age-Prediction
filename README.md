@@ -1,14 +1,12 @@
-# Bone Age Predictor
+## Bone Age Predictor using X-ray image
 
-This repository contains a web-based application designed to predict bone age from hand radiographs using deep learning. The project leverages the [RSNA Bone Age Dataset](https://www.kaggle.com/datasets/kmader/rsna-bone-age), a widely recognized dataset in medical imaging, to train and validate a Convolutional Neural Network (CNN) model. The interface, built with `Streamlit`, allows users to interactively upload hand radiographs and receive bone age predictions.
+# 1. Problem Definition
+  Age Prediction using x-Ray Using Deep Transfer Learning.
 
-## Table of Contents
+# 2. Data
+@ The project leverages the [RSNA Bone Age Dataset](https://www.kaggle.com/datasets/kmader/rsna-bone-age), a widely recognized dataset in medical imaging, to train and validate a Convolutional Neural Network (CNN) model. The interface, built with `Streamlit`, allows users to interactively upload hand radiographs and receive bone age predictions.
 
-- [Features](#features)
-- [Demo](#demo)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Dataset](#dataset)
+![Screenshot 2024-08-23 163755](https://github.com/user-attachments/assets/2237bdef-a562-4750-8c99-020b89551a3c)
 
 
 ## Features
@@ -20,29 +18,6 @@ This repository contains a web-based application designed to predict bone age fr
 
 ## Demo
 
-![Bone Age Predictor](demo_screenshot.png)
-
 Experience the live demo of the application [here](http://localhost:8501/).
 
-## Installation
 
-### Prerequisites
-
-- Python 3.7 or higher
-- pip (Python package installer)
-
-### Step 1: Clone the Repository
-
-Clone this repository to your local machine:
-
-```bash
-git clone https://github.com/your-username/bone-age-predictor.git
-cd bone-age-predictor
-
-### File struture
-bone-age-predictor/
-├── app.py                 # Main application script
-├── bone_age_model.h5      # Trained deep learning model
-├── requirements.txt       # Python dependencies
-├── README.md              # Project documentation
-└── demo_screenshot.png    # Screenshot for the README
