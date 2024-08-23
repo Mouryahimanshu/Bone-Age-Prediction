@@ -1,6 +1,6 @@
 # Bone Age Predictor
 
-This repository contains a web-based application for predicting bone age using machine learning. The application is built using Python, `TensorFlow/Keras` for deep learning, and `Gradio` for the user interface. This project is designed to provide an accessible tool for estimating bone age from hand radiographs, utilizing the [RSNA Bone Age Dataset]([https://www.kaggle.com/datasets/rsna/rsna-bone-age](https://www.kaggle.com/datasets/kmader/rsna-bone-age)).
+This repository contains a web-based application for predicting bone age using machine learning. The application is built using Python, `TensorFlow/Keras` for deep learning, and `Gradio` for the user interface. This project is designed to provide an accessible tool for estimating bone age from hand radiographs, utilizing the [RSNA Bone Age Dataset](https://www.kaggle.com/datasets/kmader/rsna-bone-age).
 
 ## Table of Contents
 
