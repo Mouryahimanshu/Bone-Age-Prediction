@@ -9,11 +9,6 @@ This repository contains a web-based application for predicting bone age using m
 - [Installation](#installation)
 - [Usage](#usage)
 - [Dataset](#dataset)
-- [Model Training](#model-training)
-- [File Structure](#file-structure)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
 
 ## Features
 
@@ -26,7 +21,7 @@ This repository contains a web-based application for predicting bone age using m
 
 ![Bone Age Predictor](demo_screenshot.png)
 
-You can view a live demo of the application [here](http://your-demo-link.com).
+You can view a live demo of the application [http://localhost:8501/]().
 
 ## Installation
 
