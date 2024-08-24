@@ -1,11 +1,13 @@
-import streamlit as st
+import gradio as gr
 from tensorflow.keras.preprocessing import image
 import numpy as np
 import tensorflow as tf
 
+#mean age is
 mean_bone_age = 127.3207517246848
-std_bone_age = 41.182021399396326
 
+#standard deviation of boneage
+std_bone_age = 41.182021399396326
 
 model = tf.keras.models.load_model(r"C:\Users\himan\Downloads\best_model.keras") 
 
@@ -21,26 +23,29 @@ def load_and_prep_image(filename, img_shape=224, rescale=True):
     
     return img
 
-def pred_and_display(model, filename, mean_bone_age, std_bone_age):
-    img = load_and_prep_image(filename)
+def predict_bone_age(model, img, mean_bone_age, std_bone_age):
+    img = load_and_prep_image(img)
     
     # Make a prediction
     pred = model.predict(tf.expand_dims(img, axis=0))
     pred = mean_bone_age + std_bone_age * pred
     pred_years = np.round(pred[0][0] / 12.0)
     
-    # Display the image
-    st.image(img, caption="Uploaded Image", use_column_width=True)
-    
-    # Display the prediction in bold
-    st.markdown(f"**Predicted Bone Age: {pred_years} years**")
+    # Return the prediction and the image
+    return f"Predicted Bone Age: {pred_years} years", img
 
-# Streamlit App Code
-st.title("Bone Age Prediction")
 
-# Upload an image
-uploaded_file = st.file_uploader(f"**Choose an image**", type="png")
+# Gradio interface
+iface = gr.Interface(
+    fn=lambda filepath: predict_bone_age(model, filepath, mean_bone_age, std_bone_age),
+    inputs=gr.Image(type="filepath", label="Upload an Image"),
+    outputs=[
+        gr.Textbox(label="Prediction"),
+        gr.Image(type="numpy", label="Processed Image")
+    ],
+    title="Bone Age Prediction",
+    description="Upload an X-ray image to predict the bone age."
+)
 
-if uploaded_file is not None:
-    st.write(f"**Calculating bone age**")
-    pred_and_display(model, uploaded_file, mean_bone_age, std_bone_age)
+# Launch the app
+iface.launch()
