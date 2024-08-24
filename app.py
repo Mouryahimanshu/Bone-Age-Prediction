@@ -1,15 +1,16 @@
-import gradio as gr
 from tensorflow.keras.preprocessing import image
 import numpy as np
 import tensorflow as tf
+import joblib
+import gradio as gr
+import pandas as pd
 
-#mean age is
+# Load the pre-trained model
+model = joblib.load("bone_age_model.pkl")
+
 mean_bone_age = 127.3207517246848
-
-#standard deviation of boneage
 std_bone_age = 41.182021399396326
 
-model = tf.keras.models.load_model(r"C:\Users\himan\Downloads\best_model.keras") 
 
 def load_and_prep_image(filename, img_shape=224, rescale=True):
     img = image.load_img(filename, target_size=(img_shape, img_shape))
@@ -35,7 +36,7 @@ def predict_bone_age(model, img, mean_bone_age, std_bone_age):
     return f"Predicted Bone Age: {pred_years} years", img
 
 
-# Gradio interface
+# Gradio Interface
 iface = gr.Interface(
     fn=lambda filepath: predict_bone_age(model, filepath, mean_bone_age, std_bone_age),
     inputs=gr.Image(type="filepath", label="Upload an Image"),
@@ -49,3 +50,4 @@ iface = gr.Interface(
 
 # Launch the app
 iface.launch()
+   
