@@ -19,7 +19,7 @@
 
 ## Demo
 
-Experience the live demo of the application [here](http://localhost:8501/). 
+Experience the live demo of the application [here](https://huggingface.co/spaces/Mouryahimanshu/Bone_Age_Prediction). 
 
 ## Features
 
